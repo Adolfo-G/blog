@@ -11,6 +11,11 @@ const seedDatabase = async () => {
         individualHooks:true,
         returning:true,
     });
+    const posts = await Posts.bulkCreate(postData,{
+        individualHooks:true,
+        returning:true,
+    });
+    process.exit(0);
+};
 
-    
-}
+seedDatabase();
