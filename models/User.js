@@ -8,7 +8,7 @@ class User extends Model {
     }
 }
 
-User.inti(
+User.init(
     {
         id:{
             type:DataTypes.INTEGER,
@@ -24,7 +24,9 @@ User.inti(
             type:DataTypes.STRING,
             allowNull:false,
             unique:true,
-            validate:{isEmail}
+            validate:{
+                isEmail:true
+            }
         },
         password:{
             type:DataTypes.STRING,
