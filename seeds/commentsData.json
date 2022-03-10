@@ -1,0 +1,12 @@
+[
+    {
+        "content": "hello",
+        "user_id":1,
+        "post_id":2
+    },
+    {
+        "content": "bye",
+        "user_id":2,
+        "post_id":1
+    }
+]
