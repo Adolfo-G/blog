@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all posts and JOIN with user data
     const postData = await Posts.findAll({
       include: [
         {
@@ -28,27 +28,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
-  try {
-    const postData = await Posts.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    const posts = postData.get({ plain: true });
-
-    res.render('post', {
-      ...posts,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
@@ -58,14 +37,25 @@ router.get('/profile', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [{ model: Posts }],
     });
+    const postData = await Posts.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
 
     const user = userData.get({ plain: true });
+    const posts = postData.map((post) => post.get({ plain: true }));
 
     res.render('profile', {
         title:'My DashBoard',
+        posts,
       ...user,
       logged_in: true
     });
+
   } catch (err) {
     res.status(500).json(err);
   }
@@ -77,7 +67,6 @@ router.get('/login', (req, res) => {
     res.redirect('/profile');
     return;
   }
-
   res.render('login');
 });
 
