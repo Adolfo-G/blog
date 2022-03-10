@@ -1,26 +1,30 @@
-// const newFormHandler = async (event) => {
-//   event.preventDefault();
+console.log('hello')
+const submitBtn = document.querySelector('#newFormBtn');
+console.log(submitBtn)
+const newPostHandler = async (event) => {
+  event.preventDefault();
 
-//   const name = document.querySelector('#project-name').value.trim();
-//   const needed_funding = document.querySelector('#project-funding').value.trim();
-//   const description = document.querySelector('#project-desc').value.trim();
+  const title = document.querySelector('#post-name').value.trim();
+  const content = document.querySelector('#post-body').value.trim();
+console.log(content,title)
+  if (title && content) {
+    const response = await fetch(`/api/posts`, {
+      method: 'POST',
+      body: JSON.stringify({ title, content }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
-//   if (name && needed_funding && description) {
-//     const response = await fetch(`/api/projects`, {
-//       method: 'POST',
-//       body: JSON.stringify({ name, needed_funding, description }),
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//     });
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to create project');
+    }
+  }
+};
 
-//     if (response.ok) {
-//       document.location.replace('/profile');
-//     } else {
-//       alert('Failed to create project');
-//     }
-//   }
-// };
+submitBtn.addEventListener('click', newPostHandler);
 
 // const delButtonHandler = async (event) => {
 //   if (event.target.hasAttribute('data-id')) {
@@ -38,9 +42,6 @@
 //   }
 // };
 
-// document
-//   .querySelector('.new-project-form')
-//   .addEventListener('submit', newFormHandler);
 
 // document
 //   .querySelector('.project-list')

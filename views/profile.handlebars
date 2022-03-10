@@ -1,0 +1,43 @@
+
+   
+<!--  -->
+{{#each user.posts as |post| }}
+      <div class="card" style="width: 85%;margin-left: auto;margin-right: auto;">
+        <h2>{{post.title}}</h2>
+        <div class="card-body">
+          <p class="card-text">{{post.content}}</p>
+        </div>
+      </div>
+{{/each}}
+<!--  -->
+
+
+      <p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Add new post
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+   <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="email" class="form-control" id="post-name">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Post</label>
+        <textarea class="form-control" id="post-body" rows="3"></textarea>
+      </div>
+      <button id="newFormBtn">Submit</button>
+    </div>
+  </div>
+  
+</div>
+      
+
+<!--  -->
+      <style>
+          h2{background-color: gray; color: white;}
+      </style>
+
+
+<script src="./js/profile.js"></script>
