@@ -6,6 +6,7 @@ let sequelize = new Sequelize(
     process.env.DB_USER,
     process.env.DB_PASSWORD,
     {
+        dialect:'mysql',
         dialectOptions:{
             ssl: {
                 require: true,
