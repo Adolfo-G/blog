@@ -9,7 +9,6 @@
 
   ## Table of Contents
   * [Installation](#installation)
-  * [Contributing](#contributing-credits)
   * [Questions](#questions)
 
   ## Installation
