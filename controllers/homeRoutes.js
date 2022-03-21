@@ -80,6 +80,7 @@ router.get('/posts/:id', withAuth, async (req,res)=>{
 console.log(post)
   res.render('postInfo',{
     post,
+    logged_in: true,
   })
   }catch(err){
     res.status(500).json(err);
