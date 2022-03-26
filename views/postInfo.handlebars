@@ -5,6 +5,12 @@
   <hr>
   {{#each post.comments as |comment|}}
   <p>{{comment.content}}</p>
+  {{!--  --}}
+  {{!-- <p>the posts users id{{../post.user.id}}</p>
+  <p>the current users id{{../user.id}}</p>
+  <p>the comment users id{{comment.user_id}}</p> --}}
+  {{!--  --}}
+  <button class="{{idCheck ../user.id comment.user_id}}">Delete</button>
   {{/each}}
 
   <p>

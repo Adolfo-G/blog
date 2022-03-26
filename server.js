@@ -29,6 +29,14 @@ app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+hbs.handlebars.registerHelper('idCheck', function(id1,id2){
+    console.log(id1)
+    console.log(id2)
+    if(id1!==id2){
+        return "hide";
+    }
+});
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, 'public')));

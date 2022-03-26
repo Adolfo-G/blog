@@ -31,6 +31,7 @@ router.get('/', async (req, res) => {
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
+  console.log("in profile route")
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -76,9 +77,15 @@ router.get('/posts/:id', withAuth, async (req,res)=>{
     include:[{model:User},
     {model:Comment}],
   })
+  const newUser = await User.findByPk(req.session.user_id,{
+    attributes: { exclude: ['password'] },
+  })
   const post = newPost.get({plain:true})
-console.log(post)
+  const user = newUser.get({plain:true})
+//console.log(post)
+
   res.render('postInfo',{
+    user,
     post,
     logged_in: true,
   })
