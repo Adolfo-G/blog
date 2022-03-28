@@ -2,19 +2,19 @@
    
 <!--  -->
 {{#each posts as |post| }}
-      <div class="card post-list" style="width: 85%;margin-left: auto;margin-right: auto;">
+      <div class="card post-list profile-posts">
         <h2>{{post.title}}</h2>
         <div class="card-body">
           <p class="card-text">{{post.content}}</p>
         </div>
-        <button data-id ="{{post.id}}">Delete</button>
+        <button data-id ="{{post.id}}" class="comment-btn">Delete</button>
       </div>
 {{/each}}
 <!--  -->
 
 
       <p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <a class="btn comment-btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Add new post
   </a>
 </p>
@@ -28,16 +28,9 @@
         <label for="exampleFormControlTextarea1" class="form-label">Post</label>
         <textarea class="form-control" id="post-body" rows="3"></textarea>
       </div>
-      <button id="newFormBtn">Submit</button>
+      <button id="newFormBtn" class="comment-btn">Submit</button>
       </div>
   </div>
 </div>
-      
-
-<!--  -->
-      <style>
-          h2{background-color: gray; color: white;}
-      </style>
-
 
 <script src="./js/profile.js"></script>

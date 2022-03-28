@@ -1,12 +1,12 @@
 [
     {
-        "title":"test",
-        "content":"I can see it!",
+        "title":"Sequelize is bad, change my mind",
+        "content":"Confusing and hard to find useful documentation examples",
         "user_id":1
     },
     {
-        "title":"test2",
-        "content":"test 2!",
+        "title":"This blog could use some color",
+        "content":"Style changes comming soon!",
         "user_id":2
     }
 ]
