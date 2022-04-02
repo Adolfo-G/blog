@@ -8,7 +8,7 @@
       Add new Comment
     </a>
   {{#each post.comments as |comment|}}
-  <p class="body-text">{{comment.content}}<div class="small-txt">by {{comment.name}} at {{comment.createdAt}}</div></p>
+  <p class="body-text">{{comment.content}}<div class="small-txt">by {{comment.user.name}} at {{comment.createdAt}}</div></p>
   <button data-id="{{comment.id}}" class="delete {{idCheck ../user.id comment.user_id}}">Delete</button>
   {{/each}}
 </div>

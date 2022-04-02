@@ -1,36 +1,50 @@
-
-   
 <!--  -->
 {{#each posts as |post| }}
-      <div class="card post-list profile-posts">
-        <h2>{{post.title}}</h2>
-        <div class="card-body">
-          <p class="card-text">{{post.content}}</p>
-        </div>
-        <button data-id ="{{post.id}}" class="comment-btn">Delete</button>
+<div class="card post-list profile-posts">
+  <h2>{{post.title}}</h2>
+  <div class="card-body">
+    <p class="card-text">{{post.content}}</p>
+  </div>
+  <button data-id="{{post.id}}" class="comment-btn">Delete</button>
+{{!-- update --}}
+  <button class="comment-btn" data-bs-toggle="collapse" href="#collapse{{post.id}}">Edit</button>
+  <div class="collapse" id="collapse{{post.id}}">
+    <div class="card card-body">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="email" class="form-control" id="update-name">
       </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Post</label>
+        <textarea class="form-control" id="update-body" rows="3"></textarea>
+      </div>
+      <button post-id="{{post.id}}" class="comment-btn update">Submit</button>
+    </div>
+  </div>
+</div>
 {{/each}}
 <!--  -->
 
 
-      <p>
-  <a class="btn comment-btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+<p>
+  <a class="btn comment-btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+    aria-controls="collapseExample">
     Add new post
   </a>
 </p>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-   <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Title</label>
-        <input type="email" class="form-control" id="post-name">
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Post</label>
-        <textarea class="form-control" id="post-body" rows="3"></textarea>
-      </div>
-      <button id="newFormBtn" class="comment-btn">Submit</button>
-      </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <input type="email" class="form-control" id="post-name">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Post</label>
+      <textarea class="form-control" id="post-body" rows="3"></textarea>
+    </div>
+    <button id="newFormBtn" class="comment-btn">Submit</button>
   </div>
+</div>
 </div>
 
 <script src="./js/profile.js"></script>
