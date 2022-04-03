@@ -1,12 +1,12 @@
 [
     {
-        "title":"Sequelize is bad, change my mind",
-        "content":"Confusing and hard to find useful documentation examples",
+        "title":"Why MVC is so important",
+        "content":"MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer for design, and the Controller layer for application logic.",
         "user_id":1
     },
     {
-        "title":"This blog could use some color",
-        "content":"Style changes comming soon!",
+        "title":"Authentication vs. Authorization",
+        "content":"There is a difference between authentication and authorization. Authentication means confirming your own identity, whereas authorization means being allowed access to the system.",
         "user_id":2
     }
 ]
