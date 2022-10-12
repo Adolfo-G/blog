@@ -13,18 +13,18 @@
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           
-          <h1>
+          <div id="title">
             <h1>{{title}}</h1>
-          </h1>
+          </div>
     
-          <ul class="nav col-12 col-md-auto mb-2 text-end mb-md-0">
+          <ul class="nav col-12 col-md-auto mb-2 text-end mb-md-0 nav-links">
             <li><a class="header" href="/" class="nav-link px-2 link-secondary">Home</a></li>
             <li><a class="header" href="/profile" class="nav-link px-2 link-dark">Dashboard</a></li>
             <li>
             {{#if logged_in}}
              <a id="logout" class="header">Log Out</a>
             {{else}}
-            <a id="loginBtn" class="header"><a href="/login">Login</a>
+            <a id="loginBtn" class="header" href="/login">Login</a>
             {{/if}}
             </li>
           </ul>

@@ -12,39 +12,45 @@
 }
 
 .card{
-    width: 85%;margin-left: auto;margin-right: auto;
+    padding: 5px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(35, 16, 16);
+    margin-bottom: 5px;
 }
 
 h2{
     background-color: rgb(35, 16, 16);
-    color: rgb(217, 234, 211);
+    color: white;
 }
 
 body{
-    background-color:rgb(217, 234, 211);
+    background-color:white;
 }
 
 header{
     background-color: rgb(35, 16, 16);
-    color: rgb(217, 234, 211);
+    color: white;
 }
 .header{
     background-color: rgb(35, 16, 16);
-    color: rgb(217, 234, 211);
+    color: white;
     text-decoration: none;
     padding:10px;
 }
 .header:hover{
     cursor:pointer;
+    color: aquamarine;
 }
 
 .body-card{
     background-color: rgb(35, 16, 16);
-    color: rgb(217, 234, 211);
+    color: white;
 }
 
 .body-text{
-    background-color: rgb(217, 234, 211);
+    background-color: white;
     color: rgb(35, 16, 16);
     padding: unset;
     
@@ -60,10 +66,45 @@ header{
     background-color: rgba(70, 131, 180, 0.685);
 }
 .profile-posts{
-    background-color: rgb(217, 234, 211);
+    background-color: white;
     color: rgb(35, 16, 16);
     border-width: 1.5px;
 }
 .homepage-card{
     margin:unset;
+}
+
+.container{
+    display: inline;
+    padding: unset;
+    margin:unset;
+    width: 100vw;
+}
+#title{
+    display:inline;
+    margin-left: 20%;
+}
+
+.nav-links{
+    margin-right: 20%;
+}
+
+.login-title{
+    text-align: center;
+    padding: 5px;
+}
+.signup-title{
+    text-align: center;
+    padding: 5px;
+}
+
+.form-container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.form-divider{
+    text-align: center;
+    margin-bottom: 30px;
 }
