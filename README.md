@@ -7,8 +7,6 @@
   
   This application uses express, MySQL/sequelize, bootstrap, and is deployed on heroku.
 
-  The application can be used here: https://my-blog-1029.herokuapp.com/
-
   ## Table of Contents
   * [Installation](#installation)
   * [Questions](#questions)
