@@ -3,8 +3,11 @@
   # My Blog
   ## Description
 
-  This application servers as a fullstack project that allows users to create accounts and make blog posts. As well as comment on others posts.
-  MySQL and Handlebars view engine were used in this project.
+  This application servers as a fullstack project that allows users to create accounts and make blog posts. As well as comment on others posts. User posts can be viewed, modified or deleted from a users dashboard.
+  
+  This application uses express, MySQL/sequelize, bootstrap, and is deployed on heroku.
+
+  The application can be used here: https://my-blog-1029.herokuapp.com/
 
   ## Table of Contents
   * [Installation](#installation)
